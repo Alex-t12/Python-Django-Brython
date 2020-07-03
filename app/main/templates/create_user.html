@@ -1,0 +1,24 @@
+{% extends 'wrepper.html' %}
+
+{% block title %}
+Sing Up
+{% endblock %}
+
+{% block body %}
+
+<h2>Создать</h2>
+<form method="post">
+	{% csrf_token %}<br>
+	{{ form.title }}	
+	{{ form.intro }}
+	<button type="submit" id = 'btn' class="btn btn-success">
+		Добавить		
+	</button>
+</form>
+<script type="text/python" id='script0'>
+	from browser import document, alert
+	def move(e):
+		alert('Task was onload')
+	document['btn'].bind('click', move)
+</script>
+{% endblock %}

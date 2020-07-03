@@ -1,0 +1,14 @@
+{% extends 'wrepper.html' %}
+
+{% block title %}
+Task Page
+{% endblock %}
+
+{% block body %}
+<h2>My Task</h2>
+{% for i in task %}
+
+<h3>{{i.title}}</h3>
+<textarea>{{i.intro}}</textarea>
+{% endfor %}
+{% endblock %}
